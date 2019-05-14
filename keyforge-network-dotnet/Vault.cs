@@ -151,7 +151,7 @@ namespace KeyforgeNetwork
             client = new HttpClient(clientHandler);
         }
 
-        public async Task Login(string username, string password) 
+        public VaultUser Login(string username, string password) 
         {
             Dictionary<string, string> loginParameters;
             Dictionary<string, string> urlParameters = new Dictionary<string, string>
@@ -175,7 +175,7 @@ namespace KeyforgeNetwork
 
             FormUrlEncodedContent encodedLoginParameters = new FormUrlEncodedContent(loginParameters);
 
-            string parameterString = await encodedUrlParameters.ReadAsStringAsync();
+            string parameterString = encodedUrlParameters.ReadAsStringAsync().Result;
             string urlPath = string.Format("https://account.asmodee.net/en/signin?{0}", parameterString);
 
             HttpResponseMessage response = client.PostAsync(urlPath, encodedLoginParameters).Result;
@@ -198,7 +198,7 @@ namespace KeyforgeNetwork
 
             VaultUserResultJSON returnJSON = JsonConvert.DeserializeObject<VaultUserResultJSON>(body);
 
-            Console.WriteLine(JsonConvert.SerializeObject(returnJSON));
+			return returnJSON.Result.User;
         }
     }
 }

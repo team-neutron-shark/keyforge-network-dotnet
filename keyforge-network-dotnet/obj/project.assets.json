@@ -215,23 +215,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/justin.kettner/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\sigma\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/keyforge-network-dotnet.csproj",
+      "projectUniqueName": "C:\\Users\\sigma\\Source\\Repos\\keyforge-network-dotnet\\keyforge-network-dotnet\\keyforge-network-dotnet.csproj",
       "projectName": "keyforge-network-dotnet",
-      "projectPath": "/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/keyforge-network-dotnet.csproj",
-      "packagesPath": "/Users/justin.kettner/.nuget/packages/",
-      "outputPath": "/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj",
+      "projectPath": "C:\\Users\\sigma\\Source\\Repos\\keyforge-network-dotnet\\keyforge-network-dotnet\\keyforge-network-dotnet.csproj",
+      "packagesPath": "C:\\Users\\sigma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sigma\\Source\\Repos\\keyforge-network-dotnet\\keyforge-network-dotnet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/justin.kettner/.config/NuGet/NuGet.Config"
+        "C:\\Users\\sigma\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -253,15 +253,15 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "12.0.2"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.3",
+            "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.2, )"
           }
         },
         "imports": [
