@@ -1,0 +1,14 @@
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.csprojAssemblyReference.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.csproj.CoreCompileInputs.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.AssemblyInfoInputs.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.AssemblyInfo.cs
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/TestClient.deps.json
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/TestClient.runtimeconfig.json
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/TestClient.runtimeconfig.dev.json
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/TestClient.dll
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/TestClient.pdb
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/keyforge-network-dotnet.dll
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/bin/Debug/netcoreapp2.1/keyforge-network-dotnet.pdb
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.csproj.CopyComplete
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.dll
+/Users/justin.kettner/Projects/keyforge-network-dotnet/TestClient/obj/Debug/netcoreapp2.1/TestClient.pdb
