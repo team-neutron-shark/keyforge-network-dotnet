@@ -1,6 +1,6 @@
 ﻿namespace KeyforgeNetwork
 {
-	enum PacketType : ushort
+	public enum PacketType : ushort
 	{
 		Exit,
 		Error,
