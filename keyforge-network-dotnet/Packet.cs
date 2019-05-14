@@ -95,7 +95,8 @@ namespace KeyforgeNetwork
 
 	public class PlayerListResponsePacket : Packet
 	{
-		public PlayerList Players { get; set; }
+		public PlayerListEntry[] Players { get; set; }
+        public uint Count { get; set; }
 
 		public PlayerListResponsePacket()
 		{
