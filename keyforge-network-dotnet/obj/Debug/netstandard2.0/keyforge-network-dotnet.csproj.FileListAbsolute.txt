@@ -9,7 +9,6 @@
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\bin\Debug\netstandard2.0\keyforge-network-dotnet.deps.json
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\bin\Debug\netstandard2.0\keyforge-network-dotnet.dll
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\bin\Debug\netstandard2.0\keyforge-network-dotnet.pdb
-C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\obj\Debug\netstandard2.0\keyforge-network-dotnet.csprojAssemblyReference.cache
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\obj\Debug\netstandard2.0\keyforge-network-dotnet.csproj.CoreCompileInputs.cache
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\obj\Debug\netstandard2.0\keyforge-network-dotnet.AssemblyInfoInputs.cache
 C:\Users\sigma\source\repos\keyforge-network-dotnet\keyforge-network-dotnet\obj\Debug\netstandard2.0\keyforge-network-dotnet.AssemblyInfo.cs

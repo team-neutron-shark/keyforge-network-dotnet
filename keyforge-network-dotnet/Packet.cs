@@ -21,7 +21,7 @@ namespace KeyforgeNetwork
 
 	}
 
-	class Packet
+	public class Packet
 	{
 		[JsonProperty(PropertyName = "sequence")]
 		public ushort Sequence { get; set; }
@@ -30,7 +30,7 @@ namespace KeyforgeNetwork
 		public PacketType Type { get; set; }
 	}
 
-	class ExitPacket : Packet
+	public class ExitPacket : Packet
 	{
 		public ExitPacket()
 		{
@@ -38,7 +38,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class VersionPacket : Packet
+	public class VersionPacket : Packet
 	{
 		[JsonProperty(PropertyName = "version")]
 		public float Version { get; set; }
@@ -49,7 +49,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class ErrorPacket : Packet
+	public class ErrorPacket : Packet
 	{
 		[JsonProperty(PropertyName = "message")]
 		public string Message { get; set; }
@@ -60,7 +60,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class LoginRequestPacket : Packet
+	public class LoginRequestPacket : Packet
 	{
 		[JsonProperty(PropertyName = "name")]
 		public string Name { get; set; }
@@ -77,7 +77,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class LoginResponsePacket : Packet
+	public class LoginResponsePacket : Packet
 	{
 		public LoginResponsePacket()
 		{
@@ -85,7 +85,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class PlayerListRequestPacket : Packet
+	public class PlayerListRequestPacket : Packet
 	{
 		public PlayerListRequestPacket()
 		{
@@ -93,7 +93,7 @@ namespace KeyforgeNetwork
 		}
 	}
 
-	class PlayerListResponsePacket : Packet
+	public class PlayerListResponsePacket : Packet
 	{
 		public PlayerList Players { get; set; }
 
