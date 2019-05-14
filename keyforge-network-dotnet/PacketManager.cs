@@ -49,8 +49,6 @@ namespace KeyforgeNetwork
             stream.Read(typeBuffer, 0, 2);
             stream.Read(lengthBuffer, 0, 2);
 
-            Console.WriteLine("stuck");
-
             ushort typeField = BitConverter.ToUInt16(typeBuffer, 0);
             ushort lengthField = BitConverter.ToUInt16(lengthBuffer, 0);
 
@@ -74,9 +72,49 @@ namespace KeyforgeNetwork
                         ExitPacket p = JsonConvert.DeserializeObject<ExitPacket>(payload);
                         return p;
                     }
+                case PacketType.Error:
+                    {
+                        ErrorPacket p = JsonConvert.DeserializeObject<ErrorPacket>(payload);
+                        return p;
+                    }
                 case PacketType.VersionRequest:
                     {
                         VersionPacket p = JsonConvert.DeserializeObject<VersionPacket>(payload);
+                        return p;
+                    }
+                case PacketType.VersionResponse:
+                    {
+                        VersionPacket p = JsonConvert.DeserializeObject<VersionPacket>(payload);
+                        return p;
+                    }
+                case PacketType.LoginRequest:
+                    {
+                        LoginRequestPacket p = JsonConvert.DeserializeObject<LoginRequestPacket>(payload);
+                        return p;
+                    }
+                case PacketType.LoginResponse:
+                    {
+                        LoginResponsePacket p = JsonConvert.DeserializeObject<LoginResponsePacket>(payload);
+                        return p;
+                    }
+                case PacketType.PlayerListRequest:
+                    {
+                        PlayerListRequestPacket p = JsonConvert.DeserializeObject<PlayerListRequestPacket>(payload);
+                        return p;
+                    }
+                case PacketType.PlayerListResponse:
+                    {
+                        LoginResponsePacket p = JsonConvert.DeserializeObject<LoginResponsePacket>(payload);
+                        return p;
+                    }
+                case PacketType.CreateLobbyRequest:
+                    {
+                        CreateLobbyRequestPacket p = JsonConvert.DeserializeObject<CreateLobbyRequestPacket>(payload);
+                        return p;
+                    }
+                case PacketType.CreateLobbyResponse:
+                    {
+                        CreateLobbyResponsePacket p = JsonConvert.DeserializeObject<CreateLobbyResponsePacket>(payload);
                         return p;
                     }
                 default:

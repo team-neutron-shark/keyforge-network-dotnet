@@ -2,6 +2,15 @@
 
 namespace KeyforgeNetwork
 {
+    public class LobbyListEntry
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "id")]
+        public string ID { get; set; }
+    }
+
 	public class PlayerListEntry
 	{
 		[JsonProperty(PropertyName = "id")]
@@ -95,7 +104,10 @@ namespace KeyforgeNetwork
 
 	public class PlayerListResponsePacket : Packet
 	{
+        [JsonProperty(PropertyName = "players")]
         public PlayerListEntry[] Players { get; set; }
+
+        [JsonProperty(PropertyName = "count")]
         public uint Count { get; set; }
 
 		public PlayerListResponsePacket()
@@ -103,4 +115,76 @@ namespace KeyforgeNetwork
 			Type = PacketType.PlayerListResponse;
 		}
 	}
+
+    public class CreateLobbyRequestPacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        public CreateLobbyRequestPacket()
+        {
+            Type = PacketType.CreateLobbyRequest;
+        }
+    }
+
+    public class CreateLobbyResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "id")]
+        public string ID { get; set; }
+
+        public CreateLobbyResponsePacket()
+        {
+            Type = PacketType.CreateLobbyResponse;
+        }
+    }
+
+    public class LobbyListRequestPacket : Packet
+    {
+        public LobbyListRequestPacket()
+        {
+            Type = PacketType.LobbyListRequest;
+        }
+    }
+
+    public class LobbyListResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "count")]
+        public uint Count { get; set; }
+
+        [JsonProperty(PropertyName = "lobbies")]
+        public LobbyListEntry[] Lobbies { get; set; }
+
+        public LobbyListResponsePacket()
+        {
+            Type = PacketType.LobbyListResponse;
+        }
+    }
+
+    public class JoinLobbyRequestPacket : Packet
+    {
+        public JoinLobbyRequestPacket()
+        {
+            Type = PacketType.JoinLobbyRequest;
+        }
+    }
+
+    public class JoinLobbyResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "id")]
+        public string ID { get; set; }
+
+        [JsonProperty(PropertyName = "success")]
+        public bool Success { get; set; }
+
+        public JoinLobbyResponsePacket()
+        {
+            Type = PacketType.LobbyListResponse;
+        }
+    }
 }
