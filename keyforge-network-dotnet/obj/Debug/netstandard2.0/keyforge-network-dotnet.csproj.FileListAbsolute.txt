@@ -1,11 +1,3 @@
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.deps.json
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.dll
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.pdb
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.csproj.CoreCompileInputs.cache
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.AssemblyInfoInputs.cache
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.AssemblyInfo.cs
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.dll
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.pdb
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.deps.json
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.dll
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.pdb
@@ -14,4 +6,11 @@ C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/obj/
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.AssemblyInfo.cs
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.dll
 C:/Users/sigma/source/repos/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.pdb
-/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.csprojAssemblyReference.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.deps.json
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.dll
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/bin/Debug/netstandard2.0/keyforge-network-dotnet.pdb
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.csproj.CoreCompileInputs.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.AssemblyInfoInputs.cache
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.AssemblyInfo.cs
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.dll
+/Users/justin.kettner/Projects/keyforge-network-dotnet/keyforge-network-dotnet/obj/Debug/netstandard2.0/keyforge-network-dotnet.pdb
