@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,9 +8,11 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
+
   <ItemGroup>
-    <Reference Include="keyforge-network-dotnet">
-      <HintPath>..\keyforge-network-dotnet\bin\Debug\netstandard2.0\keyforge-network-dotnet.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\keyforge-network-dotnet\keyforge-network-dotnet.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+
   </ItemGroup>
 </Project>
