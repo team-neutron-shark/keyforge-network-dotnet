@@ -1,16 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
+
   <ItemGroup>
-    <Reference Include="keyforge-network-dotnet">
-      <HintPath>..\keyforge-network-dotnet\bin\Debug\netstandard2.0\keyforge-network-dotnet.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\keyforge-network-dotnet\keyforge-network-dotnet.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+
   </ItemGroup>
 </Project>
