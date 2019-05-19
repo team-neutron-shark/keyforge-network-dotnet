@@ -55,6 +55,7 @@ namespace KeyforgeNetwork
 		public VersionPacket()
 		{
 			Type = PacketType.VersionRequest;
+            Version = Protocol.Version;
 		}
 	}
 
@@ -185,6 +186,85 @@ namespace KeyforgeNetwork
         public JoinLobbyResponsePacket()
         {
             Type = PacketType.LobbyListResponse;
+        }
+    }
+
+    public class LeaveLobbyRequestPacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "id")]
+        public string ID { get; set; }
+
+        public LeaveLobbyRequestPacket()
+        {
+            Type = PacketType.LeaveLobbyRequest;
+        }
+    }
+
+    public class LeaveLobbyResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "id")]
+        public string ID { get; set; }
+
+        [JsonProperty(PropertyName = "success")]
+        public bool Success { get; set; }
+
+        public LeaveLobbyResponsePacket()
+        {
+            Type = PacketType.LeaveLobbyResponse;
+        }
+    }
+
+    public class LobbyChatRequestPacket : Packet
+    {
+        [JsonProperty(PropertyName = "message")]
+        public string Message { get; set; }
+
+        public LobbyChatRequestPacket()
+        {
+            Type = PacketType.LobbyChatRequest;
+        }
+    }
+
+    public class LobbyChatResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "message")]
+        public string Message { get; set; }
+
+
+        public LobbyChatResponsePacket()
+        {
+            Type = PacketType.LobbyChatRequest;
+        }
+    }
+
+    public class LobbyKickRequestPacket : Packet
+    {
+        [JsonProperty(PropertyName = "target")]
+        public string Target { get; set; }
+
+        public LobbyKickRequestPacket()
+        {
+            Type = PacketType.KickLobbyRequest;
+        }
+    }
+
+    public class LobbyKickResponsePacket : Packet
+    {
+        [JsonProperty(PropertyName = "target")]
+        public string Target { get; set; }
+
+        public LobbyKickResponsePacket()
+        {
+            Type = PacketType.KickLobbyResponse;
         }
     }
 }

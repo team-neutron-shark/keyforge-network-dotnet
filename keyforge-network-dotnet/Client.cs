@@ -35,5 +35,47 @@ namespace KeyforgeNetwork
                 return;
             }
         }
+
+        public void SendVersionRequest()
+        {
+            VersionPacket packet = new VersionPacket();
+            PacketManager.WritePacket(client.GetStream(), packet);
+        }
+
+        public void SendLoginRequest(string username, string password)
+        {
+            Vault vault = new Vault();
+            VaultUser user = vault.Login(username, password);
+
+            if(user.Token.Length <= 0)
+            {
+                return;
+            }
+
+            if(user.ID.Length <= 0)
+            {
+                return;
+            }
+
+            LoginRequestPacket packet = new LoginRequestPacket();
+            packet.Name = username;
+            packet.Token = user.Token;
+            packet.ID = user.ID;
+
+            PacketManager.WritePacket(client.GetStream(), packet);
+        }
+
+        public void SendPlayerListRequest()
+        {
+            PlayerListRequestPacket packet = new PlayerListRequestPacket();
+            PacketManager.WritePacket(client.GetStream(), packet);
+        }
+
+        public void CreateLobbyRequest(string name)
+        {
+            CreateLobbyRequestPacket packet = new CreateLobbyRequestPacket();
+            packet.Name = name;
+            PacketManager.WritePacket(client.GetStream(), packet);
+        }
     }
 }

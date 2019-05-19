@@ -46,6 +46,13 @@
 		DiscardCardRequest,
 		DiscardCardResponse,
 		UseCardRequest,
-		UseCardResponse
-	}
+		UseCardResponse,
+        LobbyChatRequest,
+        LobbyChatResponse
+    }
+
+    public class Protocol
+    {
+        public  static float Version = 0.01f;
+    }
 }
