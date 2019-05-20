@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using KeyforgeNetwork;
+using KeyforgeNetwork.Dto.Packets;
 
 namespace TestClient
 {
