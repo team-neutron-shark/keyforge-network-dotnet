@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using KeyforgeNetwork;
@@ -20,17 +20,18 @@ namespace TestClient
         {
             _logger.LogInformation("Test Version");
 
-            Client client = new Client();
-            client.Connect("127.0.0.1", 8888);
+            var client = new Client("127.0.0.1", 8888);
 
-            VersionPacket packet = new VersionPacket();
-            packet.Version = 0.01f;
+			var packet = new VersionPacket
+			{
+				Version = 0.01f
+			};
 
-            _logger.LogInformation("Writing Packet Version {packetVersion}", packet.Version);
-            PacketManager.WritePacket(client.GetStream(), packet);
+			_logger.LogInformation("Writing Packet Version {packetVersion}", packet.Version);
+            PacketManager.WritePacket(client.NetworkStream, packet);
 
             _logger.LogInformation("Reading Packet back");
-            var packet2 = PacketManager.ReadPacket(client.GetStream());
+            var packet2 = PacketManager.ReadPacket(client.NetworkStream);
 
             _logger.LogInformation("Read Packet: {packetType}", packet2.Type);
             Console.WriteLine(packet2);

@@ -1,39 +1,42 @@
-﻿using System;
+using System;
 using System.Net.Sockets;
+using KeyforgeNetwork.Exceptions;
 
 namespace KeyforgeNetwork
 {
     public class Client
     {
-        private TcpClient client;
+        private readonly TcpClient _client = new TcpClient();
 
-        public Client()
+        private readonly string _address;
+        private readonly int _port;
+
+        public Client(string address, int port)
         {
-            client = new TcpClient();
+	        _address = address;
+	        _port = port;
+
+			Connect();
         }
 
-        public void Log(string message)
-        {
-            Console.WriteLine("[LOG] {0}", message);
-        }
+        public NetworkStream NetworkStream => _client.GetStream();
 
-        public NetworkStream GetStream()
+        public void Connect()
         {
-            return client.GetStream();
-        }
-
-        public void Connect(string address, int port)
-        {
-            try 
-            {
-                client.Connect(address, port);
-            }
-            catch (SocketException e)
-            {
-                string message = string.Format("Connect error accessing socket: {0}", e);
-                Log(message);
-                return;
-            }
+	        try
+	        {
+		        _client.Connect(_address, _port);
+	        }
+	        catch (SocketException e)
+	        {
+		        var message = $"Connect error accessing socket on {_address}:{_port} {e.Message}";
+		        throw new KeyforgeNetworkException(message, e);
+	        }
+	        catch (Exception e)
+	        {
+		        var message = $"Unknown error connecting to {_address}:{_port} {e.Message}";
+		        throw new KeyforgeNetworkException(message, e);
+			}
         }
     }
 }
