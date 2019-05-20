@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Net.Sockets;
 using System.Text;
+using KeyforgeNetwork.Dto.Packets;
 
 namespace KeyforgeNetwork
 {

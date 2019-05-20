@@ -1,24 +1,58 @@
 ﻿using System;
-using System.Net.Sockets;
-using KeyforgeNetwork;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
+using Serilog.Events;
 
 namespace TestClient
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static IServiceProvider _serviceProvider;
+
+        private static void Main(string[] args)
         {
-            Client client = new Client();
-            client.Connect("127.0.0.1", 8888);
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Verbose()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
 
-            
-            VersionPacket packet = new VersionPacket();
-            packet.Version = 0.01f;
+            RegisterServices();
 
-            PacketManager.WritePacket(client.GetStream(), packet);
+            var service = _serviceProvider.GetService<ITestClient>();
+            service.TestVersion();
 
-            var packet2 = PacketManager.ReadPacket(client.GetStream());
-            Console.WriteLine(packet2);
+            DisposeServices();
+        }
+
+        private static void RegisterServices()
+        {
+            var collection = new ServiceCollection();
+
+            // Add logging
+            collection.AddLogging(configure => configure.AddSerilog(Log.Logger));
+
+            collection.AddScoped<ITestClient, TestClient>();
+
+            // ...
+            // Add other services
+            // ...
+
+            _serviceProvider = collection.BuildServiceProvider();
+        }
+
+        private static void DisposeServices()
+        {
+            switch (_serviceProvider)
+            {
+                case null:
+                    return;
+
+                case IDisposable disposable:
+                    disposable.Dispose();
+                    break;
+            }
         }
     }
 }
