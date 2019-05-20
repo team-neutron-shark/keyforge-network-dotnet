@@ -1,24 +1,43 @@
 ﻿using System;
-using System.Net.Sockets;
-using KeyforgeNetwork;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace TestClient
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static IServiceProvider _serviceProvider;
+
+        private static void Main(string[] args)
         {
-            Client client = new Client();
-            client.Connect("127.0.0.1", 8888);
+            RegisterServices();
+            var service = _serviceProvider.GetService<ITestClient>();
+            service.TestVersion();
+            DisposeServices();
+        }
 
-            
-            VersionPacket packet = new VersionPacket();
-            packet.Version = 0.01f;
+        private static void RegisterServices()
+        {
+            var collection = new ServiceCollection();
+            collection.AddScoped<ITestClient, TestClient>();
 
-            PacketManager.WritePacket(client.GetStream(), packet);
+            // ...
+            // Add other services
+            // ...
 
-            var packet2 = PacketManager.ReadPacket(client.GetStream());
-            Console.WriteLine(packet2);
+            _serviceProvider = collection.BuildServiceProvider();
+        }
+
+        private static void DisposeServices()
+        {
+            switch (_serviceProvider)
+            {
+                case null:
+                    return;
+
+                case IDisposable disposable:
+                    disposable.Dispose();
+                    break;
+            }
         }
     }
 }
