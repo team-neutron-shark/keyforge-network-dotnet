@@ -47,7 +47,7 @@ namespace KeyforgeNetwork
 		DiscardCardResponse,
 		UseCardRequest,
 		UseCardResponse,
-		PacketTypeLobbyChatRequest,
-		PacketTypeLobbyChatResponse
+		LobbyChatRequest,
+		LobbyChatResponse
 	}
 }

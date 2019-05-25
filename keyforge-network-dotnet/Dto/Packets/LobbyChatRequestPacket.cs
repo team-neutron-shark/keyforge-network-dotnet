@@ -8,7 +8,7 @@ namespace KeyforgeNetwork.Dto.Packets
 		public string Message { get; set; }
         public LobbyChatRequestPacket()
         {
-            Type = PacketType.LobbyListRequest;
+            Type = PacketType.LobbyChatRequest;
         }
     }
 }

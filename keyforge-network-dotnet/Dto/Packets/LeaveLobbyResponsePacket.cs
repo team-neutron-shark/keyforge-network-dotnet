@@ -15,7 +15,7 @@ namespace KeyforgeNetwork.Dto.Packets
 
         public LeaveLobbyResponsePacket()
         {
-            Type = PacketType.LobbyListResponse;
+            Type = PacketType.LeaveLobbyResponse;
         }
     }
 }
