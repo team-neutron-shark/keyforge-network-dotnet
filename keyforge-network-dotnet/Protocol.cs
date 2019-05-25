@@ -1,4 +1,4 @@
-﻿namespace KeyforgeNetwork
+namespace KeyforgeNetwork
 {
 	public enum PacketType : ushort
 	{
@@ -46,6 +46,8 @@
 		DiscardCardRequest,
 		DiscardCardResponse,
 		UseCardRequest,
-		UseCardResponse
+		UseCardResponse,
+		LobbyChatRequest,
+		LobbyChatResponse
 	}
 }
